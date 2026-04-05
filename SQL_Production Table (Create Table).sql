@@ -1,4 +1,5 @@
----Create Production Tables
+---CREATE A NEW PRODUCTION DATABASE
+---CREATE A TABLE USING NEW QUERY
 
 CREATE TABLE cheese_production (
     Year INTEGER,
