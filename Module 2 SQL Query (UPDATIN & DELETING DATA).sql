@@ -22,3 +22,5 @@ WHERE First_Name = "Bacata"
 SELECT *
 FROM EmployeeDemographics
 WHERE Emp_ID = 'E1235'
+
+DROP TABLE IF EXISTS Temp_employee_Database
