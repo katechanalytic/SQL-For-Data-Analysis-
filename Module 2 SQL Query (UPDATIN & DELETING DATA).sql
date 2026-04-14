@@ -12,7 +12,6 @@ UPDATE EmployeeDemographics
 SET Age = 28
 WHERE First_Name = 'Bacata' AND Last_Name = 'Yvette'
 
-
 UPDATE EmployeeDemographics
 SET Gender = 'F'
 WHERE Emp_ID = 'E1237'
