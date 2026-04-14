@@ -10,3 +10,7 @@ Year_of_Hire INTEGER,
 Years_Service INTEGER,
 Department TEXT
 );
+
+----Inserting Data into Table
+INSERT INTO Temp_Salary_Database
+VALUES	('ET546', 'Bakare', 'Emmanuel','M')
