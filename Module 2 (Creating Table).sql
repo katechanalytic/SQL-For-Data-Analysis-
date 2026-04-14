@@ -11,8 +11,9 @@ Years_Service INTEGER,
 Department TEXT
 );
 
- --INSERT INTO Employeedemographic VALUES
+----INSERTING VALUES INTO A TABLE
+ INSERT INTO Employeedemographic VALUES
  (E1110, 'Barry', 'Uma','M',32,'barry@uma.company.com','20','customer service',2006)
 
--- INSERT INTO Employee_Salary VALUES
+INSERT INTO Employee_Salary VALUES
  (E1110, 'Barry', 'Uma',98000,,6766)
