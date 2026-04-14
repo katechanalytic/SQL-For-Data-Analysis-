@@ -1,4 +1,4 @@
-----** Module 2.1 Creating Table*
+----MODULE 2 CREATING TABLE 
 CREATE TABLE EmployeeDemographics (
 Emp_ID TEXT,
 First_Name TEXT,
