@@ -1,4 +1,4 @@
-# SQL-FOR- DATA-ANALYSISs-
+# SQL-FOR-DATA-ANALYSIS-
 
 ## WELCOME TO KATECHAnaltytic Data Analytics Beginner to Advanced Series
 
@@ -11,6 +11,4 @@ SQL query exercises are integrated into the KATECHAnalytic Google Classroom mate
 ### Note: 
 The queries provided are written using the SQLite environment. Please adapt them to the Database Management System (DBMS) language you are using for practice.
 
-PN: This Queries are written using the SQLite machine, utilixe the DMMS language you are using to practise.
-
-Recommended Tools: SQLite environment and DBeaver text editor.
+#### Recommended Tools: SQLite environment and DBeaver text editor.
