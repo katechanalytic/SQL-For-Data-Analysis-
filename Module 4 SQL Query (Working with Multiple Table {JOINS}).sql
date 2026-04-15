@@ -1,0 +1,70 @@
+/*
+MODULE 4 SQL JOINS (INNER JOINS, FULL/RIGHT/LEFT/OUTER JOINS)
+*/
+
+SELECT *
+FROM Employee_Salary es 
+
+SELECT *
+FROM EmployeeDemographics ed 
+
+SELECT *
+FROM EmployeeDemographics ed 
+INNER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+
+SELECT *
+FROM EmployeeDemographics ed 
+FULL OUTER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+ 
+SELECT *
+FROM EmployeeDemographics ed 
+LEFT OUTER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+ 
+SELECT *
+FROM EmployeeDemographics ed 
+RIGHT OUTER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+ 
+SELECT ed.Emp_ID , ed.First_Name, ed.Last_Name, ed.Department,es.Annual_Salary
+FROM EmployeeDemographics ed 
+INNER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+ 
+SELECT ed.Emp_ID , ed.First_Name, ed.Last_Name, ed.Department,es.Annual_Salary,es.Pension 
+FROM EmployeeDemographics ed 
+RIGHT JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+ 
+SELECT ed.Emp_ID , ed.First_Name, ed.Last_Name, ed.Department,es.Annual_Salary,es.Pension 
+FROM EmployeeDemographics ed 
+LEFT JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+
+SELECT ed.Emp_ID , ed.First_Name, ed.Last_Name, ed.Department,es.Annual_Salary
+FROM EmployeeDemographics ed 
+INNER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+WHERE ed.First_Name <> "Bacata"
+ORDER BY Annual_Salary ASC 
+
+SELECT ed.Emp_ID , ed.First_Name, ed.Last_Name, ed.Department,es.Annual_Salary
+FROM EmployeeDemographics ed 
+INNER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+WHERE ed.First_Name = "Bacata"
+ORDER BY Annual_Salary DESC 
+ 
+ 
+SELECT ed.Department, Avg(es.Annual_Salary)
+FROM EmployeeDemographics ed 
+INNER JOIN  Employee_Salary es 
+ON es.Emp_ID = ed.Emp_ID 
+WHERE Department = "Human Resources"
+ORDER BY Annual_Salary DESC 
+
+
+
+
