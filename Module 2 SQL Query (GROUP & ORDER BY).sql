@@ -56,4 +56,7 @@ WHERE Age < 30
 GROUP  BY Gender
 ORDER BY GENDER_COUNT ASC 
 
-
+---LIMITING DATA
+SELECT *
+FROM EmployeeDemographics
+LIMIT 5
