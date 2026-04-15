@@ -14,6 +14,9 @@ FROM EmployeeDemographics
 SELECT First_Name, Last_Name
 FROM Employee_Salary
 
+SELECT DISTINCT(Department)
+FROM EmployeeDemographics
+  
 SELECT *
 FROM EmployeeDemographics
 LIMIT 5
