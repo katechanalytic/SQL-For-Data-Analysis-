@@ -8,7 +8,8 @@ You will learn to write both simple and complex queries to retrieve data from ta
 
 SQL query exercises are integrated into the KATECHAnalytic Google Classroom materials. More detailed explanations, definitions, and practice videos are available in the classroom. Learners are strongly encouraged to engage with these exercises, as consistent practice is essential for mastery.
 
-Note: The queries provided are written using the SQLite environment. Please adapt them to the Database Management System (DBMS) language you are using for practice.
+### Note: 
+The queries provided are written using the SQLite environment. Please adapt them to the Database Management System (DBMS) language you are using for practice.
 
 PN: This Queries are written using the SQLite machine, utilixe the DMMS language you are using to practise.
 
