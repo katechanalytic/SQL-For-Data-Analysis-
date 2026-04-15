@@ -14,3 +14,6 @@ FROM Employee_Salary
 SELECT AVG(Annual_Salary)
 FROM Employee_Salary
 
+SELECT SUM(Annual_Salary)
+FROM Employee_Salary
+
