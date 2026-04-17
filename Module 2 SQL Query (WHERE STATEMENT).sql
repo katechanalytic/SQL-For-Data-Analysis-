@@ -4,62 +4,76 @@ Comparison Operator; =, <>, <, >
 Logical Operator; AND, OR, Like, Null, Not Null, IN, BETWEEN
 */
 
-SELECT*
-FROM EmployeeDemographics
+-- Select all rows and columns from EmployeeDemographics
+SELECT *
+FROM EmployeeDemographics;
 
-SELECT*
+-- Select all rows where the first name is exactly 'Forrest'
+SELECT *
 FROM EmployeeDemographics
-WHERE First_Name = 'Forrest'
+WHERE First_Name = 'Forrest';
 
-SELECT*
+-- Select all rows where the first name is NOT 'Zhang'
+SELECT *
 FROM EmployeeDemographics
-WHERE First_Name <> 'Zhang'
+WHERE First_Name <> 'Zhang';
 
-SELECT*
+-- Select employees older than 40
+SELECT *
 FROM EmployeeDemographics
-WHERE Age > 40
+WHERE Age > 40;
 
-SELECT*
+-- Select employees younger than 40
+SELECT *
 FROM EmployeeDemographics
-WHERE Age < 40
+WHERE Age < 40;
 
-SELECT*
+-- Select employees younger than 30
+SELECT *
 FROM EmployeeDemographics
-WHERE Age < 30
+WHERE Age < 30;
 
-SELECT*
+-- Select employees aged 30 or older
+SELECT *
 FROM EmployeeDemographics
-WHERE Age >= 30
+WHERE Age >= 30;
 
-SELECT*
+-- Select employees aged 35 or younger
+SELECT *
 FROM EmployeeDemographics
-WHERE Age <= 35
+WHERE Age <= 35;
 
-SELECT*
+-- Select female employees aged 30 or younger
+SELECT *
 FROM EmployeeDemographics
-WHERE Age <=30 AND Gender = 'F'
+WHERE Age <= 30 AND Gender = 'F';
 
-SELECT*
+-- Select employees who are either male OR aged 40 or younger
+SELECT *
 FROM EmployeeDemographics
-WHERE Age <=40 OR Gender = 'M'
+WHERE Age <= 40 OR Gender = 'M';
 
-SELECT*
+-- Select employees whose first name starts with 'B'
+SELECT *
 FROM EmployeeDemographics
-WHERE First_Name 
-LIKE 'B%'
+WHERE First_Name LIKE 'B%';
 
-SELECT*
+-- Select employees whose last name contains the letter 'A'
+SELECT *
 FROM EmployeeDemographics
-WHERE Last_Name LIKE '%A%'
+WHERE Last_Name LIKE '%A%';
 
-SELECT*
+-- Select employees where the last name is not null (i.e., it exists)
+SELECT *
 FROM EmployeeDemographics
-WHERE Last_Name IS NOT NULL
+WHERE Last_Name IS NOT NULL;
 
-SELECT*
+-- Select employees where the last name is null (missing)
+SELECT *
 FROM EmployeeDemographics
-WHERE Last_Name IS NULL
+WHERE Last_Name IS NULL;
 
-SELECT*
+-- Select employees whose first name is either 'Carol' or 'Biti'
+SELECT *
 FROM EmployeeDemographics
-WHERE first_name IN ('Carol', 'Biti')
+WHERE First_Name IN ('Carol', 'Biti');
