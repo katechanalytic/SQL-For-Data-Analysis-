@@ -77,8 +77,3 @@ SELECT *
 FROM EmployeeDemographics
 LIMIT 5;
 
-
----LIMITING DATA
-SELECT *
-FROM EmployeeDemographics
-LIMIT 5
