@@ -1,24 +1,31 @@
 /*
 MODULE 5 DATE FUNCTIONS
 */
-SELECT CURRENT_DATE
 
-WHERE order_date = CURRENT_DATE
+-- Get the current system date
+SELECT CURRENT_DATE;
 
---Extracts a specific component (such as year or month) from a date.
-SELECT DATE_PART('year', order_date)
+-- Example: filter orders placed today
+SELECT *
+FROM orders
+WHERE order_date = CURRENT_DATE;
+
+-- Extract specific components (year, month, day) from a date
+SELECT DATE_PART('year', order_date) AS Order_Year
 FROM orders;
 
---Calculates the difference between two dates.
-SELECT DATE_DIFF('day', order_date, delivery_date)
+-- Calculate the difference between two dates (delivery minus order date)
+-- Note: In many SQL dialects, use DATEDIFF instead of DATE_DIFF
+SELECT DATEDIFF(day, order_date, delivery_date) AS Days_To_Delivery
 FROM orders;
 
---The EXTRACT() function retrieves specific parts of a date.
+-- Using EXTRACT to break down a date into parts
 SELECT
-  EXTRACT(YEAR FROM order_date) AS year,
-  EXTRACT(MONTH FROM order_date) AS month,
-  EXTRACT(DAY FROM order_date) AS day
+  EXTRACT(YEAR FROM order_date) AS Year,
+  EXTRACT(MONTH FROM order_date) AS Month,
+  EXTRACT(DAY FROM order_date) AS Day
 FROM orders;
+
 
 
 
