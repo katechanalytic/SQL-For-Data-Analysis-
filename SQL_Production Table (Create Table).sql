@@ -1,6 +1,8 @@
 ---CREATE A NEW PRODUCTION DATABASE
 ---CREATE A TABLE USING NEW QUERY
 
+
+-- Cheese production table
 CREATE TABLE cheese_production (
     Year INTEGER,
     Period TEXT,
@@ -12,6 +14,7 @@ CREATE TABLE cheese_production (
 );
 
 
+-- Honey production table
 CREATE TABLE honey_production (
     Year INTEGER,
     Geo_Level TEXT,
@@ -21,6 +24,7 @@ CREATE TABLE honey_production (
 );
 
 
+--Milk production table
 CREATE TABLE milk_production (
     Year INTEGER,
     Period TEXT,
@@ -32,6 +36,7 @@ CREATE TABLE milk_production (
 );
 
 
+-- Coffee production table                      
 CREATE TABLE coffee_production (
     Year INTEGER,
     Period TEXT,
@@ -42,6 +47,7 @@ CREATE TABLE coffee_production (
 );
 
 
+-- Egg production table
 CREATE TABLE egg_production (
     Year INTEGER,
     Period TEXT,
@@ -52,12 +58,14 @@ CREATE TABLE egg_production (
 );
 
 
+-- State lookup table (maps state names to ANSI codes)
 CREATE TABLE state_lookup (
     State TEXT,
     State_ANSI INTEGER
 );
 
 
+-- Yogurt production table
 CREATE TABLE yogurt_production (
     Year INTEGER,
     Period TEXT,
