@@ -31,5 +31,16 @@
  IN (SELECT Emp_ID
  FROM EmployeeDemographics
  WHERE Age <30)
+
+--Can you find the total yogurt production for states in the year 2022 which also have cheese production data from 2023? This will help the Dairy Division in their planning.
+SELECT
+SUM(YP.Value) TOTAL_YOGHURT_PRODUCTION
+FROM yogurt_production YP
+WHERE YP.Year = '2022' AND YP.State_ANSI IN 
+(SELECT DISTINCT
+   CP.State_ANSI
+  FROM cheese_production CP
+  WHERE CP.Year = '2023');
+
  
 
