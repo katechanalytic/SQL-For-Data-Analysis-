@@ -64,17 +64,27 @@ ON es.Emp_ID = ed.Emp_ID
 WHERE Department = "Human Resources"
 ORDER BY Annual_Salary DESC 
 
---Which states had cheese production greater than 100 million in April 2023? 
---The Cheese Department wants to focus their marketing campaign. 
+--Which states had cheese production greater than 100 million in April 2022? 
+--The Cheese Department wants to focus their marketing efforts there. 
 --How many states are there?
-SELECT L.State,Period,YEAR,Value ,L.State_ANSI
-FROM cheese_production P
-INNER JOIN state_lookup L
-ON P.State_ANSI = L.State_ANSI
-WHERE P.Value <> 100000000
- AND P.Period = 'APR'
- AND P.Year = 2023;
+SELECT sl.State,Period,YEAR,Value ,sl.State_ANSI
+FROM  cheese_production cp 
+INNER JOIN state_lookup sl 
+ON cp.State_ANSI = sl.State_ANSI
+WHERE cp.Value <> 100000000
+ AND cp.Period = 'APR'
+ AND cp.Year = 2022;
 
+--For a cross-commodity report, can you list all states with their cheese production values, even if they didn’t produce any milk in MAR of 2020?
+--What is the total for NEW JERSEY?
+SELECT sl.State,
+SUM(cp.Value) TOTAL_CHEESE_PRODUCTION
+FROM state_lookup sl 
+LEFT JOIN cheese_production cp 
+ON sl.State_ANSI = cp.State_ANSI
+WHERE cp.Period = 'MAR' AND cp.Year = 2020
+GROUP BY sl.State
+HAVING sl.State = 'NEW JERSEY';
 
 
 
