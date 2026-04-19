@@ -65,7 +65,7 @@ WHERE Department = "Human Resources"
 ORDER BY Annual_Salary DESC 
 
 --Which states had cheese production greater than 100 million in April 2023? 
---The Cheese Department wants to focus their marketing efforts there. 
+--The Cheese Department wants to focus their marketing campaign. 
 --How many states are there?
 SELECT L.State,Period,YEAR,Value ,L.State_ANSI
 FROM cheese_production P
