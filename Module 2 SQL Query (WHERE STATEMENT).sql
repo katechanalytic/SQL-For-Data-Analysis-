@@ -43,6 +43,24 @@ SELECT *
 FROM EmployeeDemographics
 WHERE Age <= 35;
 
+--Get the state names with their corresponding ANSI codes from the state_lookup table,What number is OHIO? (PRODUCTION DATABASE)
+SELECT * 
+FROM state_lookup
+WHERE State = 'OHIO'
+
+--The State Relations team wants a list of all states names with their corresponding ANSI codes.
+--Can you generate that list?
+--What is the State_ANSI code for Florida?
+SELECT *
+FROM state_lookup sl 
+WHERE State = 'FLORIDA'
+
+--The State Relations team wants a list of all states names with their corresponding ANSI codes. (PRODUCTION DATABASE)
+--Can you generate that list? What is the total for NEW KENTUCKY?
+SELECT *
+FROM state_lookup sl 
+WHERE State = 'KENTUCKY'
+
 -- Select female employees aged 30 or younger
 SELECT *
 FROM EmployeeDemographics
@@ -77,3 +95,21 @@ WHERE Last_Name IS NULL;
 SELECT *
 FROM EmployeeDemographics
 WHERE First_Name IN ('Carol', 'Biti');
+
+--Find the total yogurt production for states that also produced cheese in 2021.
+SELECT SUM(y.Value)
+FROM yogurt_production y
+WHERE y.Year = '2021' AND y.State_ANSI IN (SELECT DISTINCT c.State_ANSI 
+FROM cheese_production c WHERE c.Year = '2021');
+
+--Find the average coffee production for all years where the honey production exceeded 1 million.
+SELECT AVG(cp.Value) as AVERAGE_COFFEE_PRODUCTION
+FROM  coffee_production cp 
+WHERE cp.Year
+IN (SELECT Year
+FROM honey_production
+WHERE Value > 1000000);
+
+
+
+
